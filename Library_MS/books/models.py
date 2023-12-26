@@ -2,10 +2,6 @@ from django.db import models
 import datetime
 
 
-YEAR_CHOICES = []
-for r in range(1980, (datetime.datetime.now().year+1)):
-    YEAR_CHOICES.append((r,r))
-
 
 # Create your models here.
 
@@ -41,7 +37,7 @@ class Faculty(models.Model):
     
 #choice for table Book
 YEAR_CHOICES = []
-for r in range(1980, (datetime.datetime.now().year+1)):
+for r in range(1800, (datetime.datetime.now().year+1)):
     YEAR_CHOICES.append((r,r))
 
 class Book(models.Model):
@@ -53,7 +49,7 @@ class Book(models.Model):
     edition = models.IntegerField()
     author_id = models.ForeignKey(Author, on_delete=models.CASCADE)
     publisher_id = models.ForeignKey(Publisher, on_delete=models.CASCADE)
-    publiction_year = models.IntegerField(_('year'), choices=YEAR_CHOICES, default=datetime.datetime.now().year)
+    publiction_year = models.IntegerField(('year'), choices=YEAR_CHOICES, default=datetime.datetime.now().year)
     section_id = models.ForeignKey(Section, on_delete=models.CASCADE)
     faculty_id = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     description = models.TextField()
