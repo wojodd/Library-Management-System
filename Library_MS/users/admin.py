@@ -9,11 +9,9 @@ admin.site.register(CustomUsers)
 
 admin.site.register(gender)
 
-admin.site.register(Libraries)
-
 admin.site.register(Despositves)
 
 admin.site.register(Semester)
 
 admin.site.register(Cities)
-admin.site.register(Rolel)
+admin.site.register(Role)
