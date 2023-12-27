@@ -1,5 +1,6 @@
 from django.db import models
 from books.models import *
+
 # Create your models here.
 
 class Semester(models.Model):
