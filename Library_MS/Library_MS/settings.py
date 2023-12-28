@@ -61,6 +61,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Library_MS.urls'
+AUTH_USER_MODEL = 'users.CustomUsers'
 
 TEMPLATES = [
     {
