@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'books',
     'users'
 ]
+AUTH_USER_MODEL = 'users.CustomUsers'
 
 JET_THEMES = [
     {
@@ -81,6 +82,7 @@ REST_FRAMEWORK = {
    'DEFAULT_AUTHENTICATION_CLASSES': [
        'rest_framework.authentication.BasicAuthentication',
        'rest_framework.authentication.SessionAuthentication',
+       'rest_framework.authentication.TokenAuthentication',
    ]
 }
 
@@ -95,6 +97,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Library_MS.urls'
+AUTH_USER_MODEL = 'users.CustomUsers'
 
 TEMPLATES = [
     {

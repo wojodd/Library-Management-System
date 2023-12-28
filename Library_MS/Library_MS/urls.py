@@ -21,6 +21,10 @@ urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('admin/', admin.site.urls),
     path('', include('books.urls')),
+<<<<<<< HEAD
     #path('', include('users.urls'))
     
+=======
+    path('', include('users.urls'))
+>>>>>>> refs/remotes/origin/main
 ]
