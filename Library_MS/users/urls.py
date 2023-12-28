@@ -15,6 +15,7 @@ urlpatterns = [
    path('register/', register_user, name='register'),
    path('login/', user_login, name='login'),
    path('logout/', user_logout, name='logout'),
+   path('change_password/', change_password, name='change_password'),
    path('viewset/', include(router.urls)),
    path('viewset/<int:pk>/', include(router.urls)),
 ]

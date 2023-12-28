@@ -22,25 +22,21 @@ class gender(models.Model):
     Gender_person=models.CharField(max_length=100)
     
 class CustomUsers(AbstractUser):
-    Fname = models.CharField(max_length=100,null=True)
-    Lname = models.CharField(max_length=100)
-    Father_name = models.CharField(max_length=100)
     Father_name = models.CharField(max_length=100)
     gender_id=models.ForeignKey(gender,on_delete=models.CASCADE,null=True)
     feculty_id=models.ForeignKey(Faculty,on_delete=models.CASCADE,null=True)
     semester_id=models.ForeignKey(Semester,on_delete=models.CASCADE,null=True)
-    email=models.EmailField(max_length=100,null=True)
-    contant_no=models.IntegerField(null=True)
-    identification_no=models.IntegerField(null=True)
+    contant_no=models.CharField(max_length=14)
     Registration_no=models.IntegerField(null=True)
-    page_no=models.IntegerField(null=True)
     original_Address=models.CharField(max_length=100)
     current_Address=models.CharField(max_length=100)
     role_id=models.ForeignKey(Role,on_delete=models.CASCADE, null=True)
-    Is_Activee=models.SmallIntegerField(null=True)
     signature=models.CharField(max_length=100)
-    password=models.CharField(max_length=10)
-    last_login=models.CharField(max_length=10)
+
+
+
+    class Meta:
+        db_table = 'auth_user'
 
 class Despositves(models.Model):
     User_id=models.ForeignKey(CustomUsers,on_delete=models.CASCADE)
