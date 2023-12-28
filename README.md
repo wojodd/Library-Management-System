@@ -6,7 +6,8 @@ This project aims to develop a Library Management System using the Django REST F
 
 ### Database Integration: 
 Implement the provided database schema which includes tables for books, authors, publishers, members, loans, and more.
-![ERD Diagram](https://www.edrawmax.com/templates/1016350/?_gl=1%2a1p5zme%2a_gcl_au%2aMTU5NDY2ODk5NC4xNzAzNTA0Mzcw%2a_ga%2aMjEwNzY1MTMyNS4xNzAzNTA0Mzcx%2a_ga_24WTSJBD5B%2aMTcwMzUwNDM3MS4xLjEuMTcwMzUwNDQzNy42MC4wLjA.&_ga=2.69009425.1888417618.1703504371-2107651325.1703504371)
+![ERD Diagram]![image](https://github.com/wojodd/Library-Management-System/assets/86664682/f72371e8-81ff-4a5e-ba35-2b1f3dc77068)
+
 
 
 ### User-Friendly Admin Panel: 
